@@ -1,6 +1,6 @@
 <template>
     <div id="list" >
-      <div v-for="(item, index) in listData" :key="index" class="item" @click="showClick">
+      <div v-for="(item, index) in listData" :key="index" class="item" @click="listViewClick">
         <span class="icon">
           <svg :fill="item.iconColor"><use :xlink:href="item.icon"></use></svg>
         </span>
@@ -21,7 +21,7 @@
       }
     },
 		methods:{
-			showClick() {
+			listViewClick() {
 				this.$toast.show("请先登录",1500)
 			}
 		}

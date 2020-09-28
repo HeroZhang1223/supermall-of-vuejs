@@ -1,21 +1,21 @@
 <template>
   <div id="profile">
     <nav-bar class="nav-bar"></nav-bar>
-    <UserInfo @click.native="showClick"></UserInfo>
+    <UserInfo></UserInfo>
     <section class="account">
-      <div class="account-item" @click="showClick">
+      <div class="account-item" @click="profileClick">
         <div class="number">
           <span class="balance">0.00</span>元
         </div>
         <div class="account-info">我的余额</div>
       </div>
-      <div class="account-item" @click="showClick">
+      <div class="account-item" @click="profileClick">
         <div class="number">
           <span class="balance">0</span>个
         </div>
         <div class="account-info">我的优惠</div>
       </div>
-      <div class="account-item" @click="showClick">
+      <div class="account-item" @click="profileClick">
         <div class="number">
           <span class="balance">0</span>分
         </div>
@@ -26,6 +26,8 @@
     <!--3.封装成一个整体-->
     <list-view :list-data="orderList" class="order-list"></list-view>
     <list-view :list-data="serviceList" class="service-list"></list-view>
+		
+		<div class="myMessage">@made by zhangzhengxiang</div>
   </div>
 </template>
 
@@ -53,7 +55,7 @@
       }
     },
 		methods:{
-			showClick() {
+			profileClick() {
 				this.$toast.show("请先登录",1500)
 			}
 		},
@@ -107,5 +109,10 @@
   .order-list, .service-list {
     margin-top: 12px;
   }
+	.myMessage{
+		position: fixed;
+		margin-left: 75px;
+		bottom: 150px;
+	}
 
 </style>

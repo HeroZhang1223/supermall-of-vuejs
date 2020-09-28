@@ -13,7 +13,7 @@
 		</scroll>
 		<back-top @click.native="backclick" v-if="isShowBackTop"></back-top>
 		<detail-bottom-bar @addToCart="addCart"></detail-bottom-bar>
-		<toast :message="message" :show="show"></toast>
+		<!-- <toast :message="message" :show="show"></toast> -->
 	</div> 	
 </template>
 
@@ -30,7 +30,7 @@
 	import GoodsList from "../../components/content/goods/GoodsList.vue"
 	import Scroll from "../../components/common/scroll/Scroll.vue"
 	import BackTop from "../../components/common/backtop/BackTop.vue"
-	import Toast from "../../components/common/toast/Toast.vue"
+	// import Toast from "../../components/common/toast/Toast.vue"
 	import {getDetail,Goods,Shop,GoodsParam,getRecommend} from "../../network/detail.js"
 	import {debounce} from "../../common/utils.js"
 	export default {
@@ -47,7 +47,7 @@
 			GoodsList,
 			Scroll,
 			BackTop,
-			Toast
+			// Toast
 		},
 		data() {
 			return {
@@ -64,8 +64,8 @@
 				getThemeTopYs:null,
 				currentIndex:0,
 				isShowBackTop:false,
-				message:"",
-				show:false
+				// message:"",
+				// show:false
 			}
 		},
 		mounted() {
