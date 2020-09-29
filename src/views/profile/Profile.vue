@@ -111,8 +111,8 @@
   }
 	.myMessage{
 		position: fixed;
-		margin-left: 75px;
-		bottom: 150px;
+		margin-left: 95px;
+		bottom: 120px;
 	}
 
 </style>

@@ -1,4 +1,4 @@
-import {request} from "./request.js"
+import request from "./request.js"
 
 export function getDetail(iid){
 	return request({
